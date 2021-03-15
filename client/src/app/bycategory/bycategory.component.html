@@ -1,0 +1,19 @@
+
+<div class="container">
+  <div id="blog" class="row"> 
+               
+                <div class="col-md-10 blogShort" *ngFor="let post of posts">
+                    <h1>{{post.postTitle}}</h1>
+                    <img src="{{post.postImgUrl}}" style="width: 150px; height: 150px;">
+                    
+                        <em>Last Updated on: <a href="" target="_blank">{{post.updated}}</a></em>
+                    <article><p>
+                      {{post.postDesc}}
+                        </p></article>
+                    <a class="btn btn-btn-sucess btn-blog pull-right marginBottom10" [routerLink]="['/details/', post._id]">READ MORE</a> 
+                </div>
+                 
+                
+              <div class="col-md-12 gap10"></div>
+            </div>
+</div>
